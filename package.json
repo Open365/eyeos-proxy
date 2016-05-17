@@ -1,0 +1,18 @@
+{
+  "name": "proxy",
+  "dependencies": {
+    "eyeos-service-ready-notify": "*"
+  },
+  "microservices": [
+    "mongo.service.consul:27017",
+    "rabbit.service.consul:5672",
+    "websockify.service.consul:8102",
+    "camel.service.consul:8196",
+    "cdn.service.consul:8090",
+    "chat.service.consul:5280",
+    "cache.service.consul:9909",
+    "seafileServer.service.consul:8000",
+    "seafileServer.service.consul:8082"
+  ],
+  "license": "AGPL-3.0"
+}
