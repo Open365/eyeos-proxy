@@ -6,7 +6,8 @@
   "microservices": [
     "mongo.service.consul:27017",
     "rabbit.service.consul:5672",
-    "websockify.service.consul:8102",
+    "websockify.service.consul:8100",
+    "websockify.service.consul:8104",
     "camel.service.consul:8196",
     "cdn.service.consul:8090",
     "chat.service.consul:5280",
