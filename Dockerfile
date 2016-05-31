@@ -8,6 +8,7 @@ EXPOSE 443 80
 CMD /var/service/start.sh
 
 RUN apk update && apk add nginx && rm -fr /etc/ssl /var/cache/apk/* /tmp/* && \
+    chown -R nginx /var/lib/nginx && \
     npm install -g eyeos-service-ready-notify-cli && \
     npm cache clear
 
