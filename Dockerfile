@@ -9,7 +9,8 @@ CMD /var/service/start.sh
 
 COPY alpine-*.list /var/service/
 
-RUN /scripts-base/buildDependencies.sh --production --install && \
+RUN sed -i 's/3.3/3.4/g' /etc/apk/repositories && apk update && apk upgrade && \
+    /scripts-base/buildDependencies.sh --production --install && \
     rm -fr /etc/ssl /var/cache/apk/* /tmp/* && \
     chown -R nginx /var/lib/nginx && \
     npm install -g eyeos-service-ready-notify-cli && \
